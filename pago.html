@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Acceso - Proceso de Transformación TOTAL</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://tailwindcss.com"></script>
+    <title>Finalizar Acceso - Proceso de Transformación</title>
+    <!-- Tailwind CSS CDN Completo -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -67,13 +67,10 @@
 
             <p class="text-xs text-slate-400 mb-6">Haz clic en el botón de abajo para finalizar tu compra de forma completamente segura:</p>
 
-            <!-- Botón Oficial de PayPal por Formulario Nativo (A prueba de bloqueadores) -->
-            <form action="https://www.paypal.com/ncp/payment" method="post" target="_top" class="w-full my-4">
-                <input type="hidden" name="hosted_button_id" value="CZE53TNDCCGZA" />
-                <button type="submit" class="w-full bg-tealGlow hover:bg-teal-600 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-lg shadow-tealGlow/30 text-center text-base flex items-center justify-center gap-2 cursor-pointer">
-                    <i class="fa-brands fa-paypal text-xl"></i> Pagar con PayPal
-                </button>
-            </form>
+            <!-- Botón de Pago Directo Limpio (Sustituye TU_ENLACE_PAYPAL por tu enlace de pago real de PayPal) -->
+            <a href="https://www.paypal.com/ncp/payment/CZE53TNDCCGZA" target="_blank" rel="noopener noreferrer" class="w-full bg-tealGlow hover:bg-teal-600 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-lg shadow-tealGlow/30 text-center text-base inline-flex items-center justify-center gap-2">
+                <i class="fa-brands fa-paypal text-xl"></i> Pagar con PayPal
+            </a>
 
             <!-- Footer interno / Garantía -->
             <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500">
