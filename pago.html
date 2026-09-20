@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Acceso - Proceso de Transformación</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -32,9 +32,6 @@
             border: 1px solid rgba(45, 212, 191, 0.15);
         }
     </style>
-
-    <!-- Parte 1 del código de PayPal (SDK) -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAZe_i_syACKhUQuS2c2ucWRAqRA-r9StJ2trPx_5K2pEOQV95r3tJ-RywwrrTT3PpwrEZptni4xqrG&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 </head>
 <body class="h-full bg-slateDark text-slate-100 flex flex-col justify-between selection:bg-tealGlow selection:text-white">
 
@@ -44,57 +41,43 @@
             <div class="w-8 h-8 rounded-lg bg-tealGlow/20 flex items-center justify-center border border-tealGlow/40">
                 <i class="fa-solid fa-bolt text-accentCyan"></i>
             </div>
-            <span class="font-bold text-lg tracking-wide text-white">Método <span class="text-accentCyan">Clidad</span></span>
+            <span class="font-bold text-lg tracking-wide text-white">Método <span class="text-accentCyan">Claridad</span></span>
         </div>
         <div class="text-xs text-slate-400 flex items-center gap-2">
-            <i class="fa-solid fa-lock text-accentCyan"></i> Pasarela 100% Segura y Encriptada
+            <i class="fa-solid fa-lock text-accentCyan"></i> Pasarela 100% Segura
         </div>
     </header>
 
     <!-- Contenido Principal -->
     <main class="flex-grow flex items-center justify-center px-4 py-12">
-        <div class="max-w-md w-full glass-card rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+        <div class="max-w-md w-full glass-card rounded-2xl p-8 shadow-2xl relative overflow-hidden text-center">
             
             <!-- Luz decorativa superior -->
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-tealGlow/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="text-center mb-8">
-                <div class="inline-block p-3 rounded-full bg-tealGlow/10 text-accentCyan mb-4 border border-tealGlow/20">
-                    <i class="fa-solid fa-shield-halved text-2xl"></i>
-                </div>
-                <h1 class="text-2xl font-bold text-white mb-2">Activa Tu Acceso Inmediato</h1>
-                <p class="text-slate-400 text-sm">Estás a un solo paso de iniciar tu proceso de claridad mental y desbloqueo personal.</p>
+            <div class="inline-block p-3 rounded-full bg-tealGlow/10 text-accentCyan mb-4 border border-tealGlow/20">
+                <i class="fa-solid fa-shield-halved text-2xl"></i>
             </div>
 
-            <!-- Resumen del Producto -->
-            <div class="bg-slate-900/60 rounded-xl p-4 mb-6 border border-slate-800">
-                <div class="flex justify-between items-center mb-2">
-                    <span class="font-medium text-slate-200 text-sm">Programa de Transformación</span>
-                    <span class="text-accentCyan font-bold text-lg">Acceso Total</span>
-                </div>
-                <ul class="text-xs text-slate-400 space-y-1.5">
-                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Material digital exclusivo</li>
-                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Entrega automática a tu correo</li>
-                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Garantía de satisfacción</li>
-                </ul>
-            </div>
+            <h1 class="text-2xl font-bold text-white mb-4">Estás a un paso de activar tu transformación</h1>
+            
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Has solicitado acceso al <span class="text-accentCyan font-semibold">Proceso de Claridad Mental y Desbloqueo</span>. Da el paso definitivo para recuperar tu enfoque y llevar tu potencial al siguiente nivel.
+            </p>
 
-            <!-- Contenedor del Botón de PayPal (Parte 2) -->
-            <div class="w-full flex justify-center my-6">
-                <div id="paypal-container-CZE53TNDCCGZA" class="w-full"></div>
-            </div>
+            <p class="text-xs text-slate-400 mb-6">Haz clic en el botón de abajo para finalizar tu compra de forma completamente segura:</p>
 
-            <script>
-                paypal.HostedButtons({
-                    hostedButtonId: "CZE53TNDCCGZA",
-                }).render("#paypal-container-CZE53TNDCCGZA");
-            </script>
+            <!-- Botón Oficial de PayPal por Formulario Nativo (A prueba de bloqueadores) -->
+            <form action="https://www.paypal.com/ncp/payment" method="post" target="_top" class="w-full my-4">
+                <input type="hidden" name="hosted_button_id" value="CZE53TNDCCGZA" />
+                <button type="submit" class="w-full bg-tealGlow hover:bg-teal-600 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-lg shadow-tealGlow/30 text-center text-base flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-brands fa-paypal text-xl"></i> Pagar con PayPal
+                </button>
+            </form>
 
-            <!-- Garantía y Soporte -->
-            <div class="mt-6 text-center border-t border-slate-800/80 pt-4">
-                <p class="text-xs text-slate-500">
-                    ¿Tienes dudas con tu pago? Escríbenos a soporte y te ayudaremos de inmediato.
-                </p>
+            <!-- Footer interno / Garantía -->
+            <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500">
+                <p>Transacción segura procesada por PayPal.<br>&copy; 2026 Todos los derechos reservados.</p>
             </div>
 
         </div>
@@ -102,7 +85,7 @@
 
     <!-- Footer -->
     <footer class="w-full py-6 text-center text-xs text-slate-500 border-t border-slate-800/60">
-        &copy; 2026 Todos los derechos reservados. Transacción procesada de forma segura mediante PayPal.
+        &copy; 2026 Método Claridad. Todos los derechos reservados.
     </footer>
 
 </body>
