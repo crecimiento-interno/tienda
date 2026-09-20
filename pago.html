@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Acceso - Proceso de Transformación</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slateDark: '#0B0F19',
+                        slateCard: '#131B2E',
+                        tealGlow: '#0D9488',
+                        accentCyan: '#2DD4BF'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(19, 27, 46, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(45, 212, 191, 0.15);
+        }
+    </style>
+
+    <!-- Parte 1 del código de PayPal (SDK) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAZe_i_syACKhUQuS2c2ucWRAqRA-r9StJ2trPx_5K2pEOQV95r3tJ-RywwrrTT3PpwrEZptni4xqrG&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+</head>
+<body class="h-full bg-slateDark text-slate-100 flex flex-col justify-between selection:bg-tealGlow selection:text-white">
+
+    <!-- Header sutil -->
+    <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-slate-800/60">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg bg-tealGlow/20 flex items-center justify-center border border-tealGlow/40">
+                <i class="fa-solid fa-bolt text-accentCyan"></i>
+            </div>
+            <span class="font-bold text-lg tracking-wide text-white">Método <span class="text-accentCyan">Clidad</span></span>
+        </div>
+        <div class="text-xs text-slate-400 flex items-center gap-2">
+            <i class="fa-solid fa-lock text-accentCyan"></i> Pasarela 100% Segura y Encriptada
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="max-w-md w-full glass-card rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+            
+            <!-- Luz decorativa superior -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-tealGlow/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="text-center mb-8">
+                <div class="inline-block p-3 rounded-full bg-tealGlow/10 text-accentCyan mb-4 border border-tealGlow/20">
+                    <i class="fa-solid fa-shield-halved text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-white mb-2">Activa Tu Acceso Inmediato</h1>
+                <p class="text-slate-400 text-sm">Estás a un solo paso de iniciar tu proceso de claridad mental y desbloqueo personal.</p>
+            </div>
+
+            <!-- Resumen del Producto -->
+            <div class="bg-slate-900/60 rounded-xl p-4 mb-6 border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-medium text-slate-200 text-sm">Programa de Transformación</span>
+                    <span class="text-accentCyan font-bold text-lg">Acceso Total</span>
+                </div>
+                <ul class="text-xs text-slate-400 space-y-1.5">
+                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Material digital exclusivo</li>
+                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Entrega automática a tu correo</li>
+                    <li><i class="fa-solid fa-check text-accentCyan mr-1.5"></i> Garantía de satisfacción</li>
+                </ul>
+            </div>
+
+            <!-- Contenedor del Botón de PayPal (Parte 2) -->
+            <div class="w-full flex justify-center my-6">
+                <div id="paypal-container-CZE53TNDCCGZA" class="w-full"></div>
+            </div>
+
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "CZE53TNDCCGZA",
+                }).render("#paypal-container-CZE53TNDCCGZA");
+            </script>
+
+            <!-- Garantía y Soporte -->
+            <div class="mt-6 text-center border-t border-slate-800/80 pt-4">
+                <p class="text-xs text-slate-500">
+                    ¿Tienes dudas con tu pago? Escríbenos a soporte y te ayudaremos de inmediato.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-slate-500 border-t border-slate-800/60">
+        &copy; 2026 Todos los derechos reservados. Transacción procesada de forma segura mediante PayPal.
+    </footer>
+
+</body>
+</html>
